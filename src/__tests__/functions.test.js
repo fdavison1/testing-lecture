@@ -36,3 +36,8 @@ test('falsy values are falsy', ()=> {
     expect(undefined).toBeFalsy()
 })
 
+const wishList = ['Steinway', 'Bosendorfer', 'Yamaha', 'Faz']
+
+test('wishlist contains Steinway', ()=> {
+    expect(wishList).toContain('Steinway')
+})

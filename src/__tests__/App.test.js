@@ -36,3 +36,15 @@ it('can change the input', ()=> {
     })
     expect(input.value).toBe('Practice some more')
 })
+
+it('can add to the list', () => {
+    act(()=> {
+        render(<App/>, container)
+    })
+    const button = container.querySelector('button')
+    act(()=> {
+        Simulate.click(button)
+    })
+    const todos = container.querySelectorAll('li')
+    expect(todos.length).toBe(2)
+})
